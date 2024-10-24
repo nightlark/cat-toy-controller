@@ -83,11 +83,15 @@
                 await writeValue('AA5501BB');
             } else if (event.key === 'ArrowDown') {
                 await writeValue('AA5502BB');
+            } else if (event.key === ' ') {
+                await writeValue('AA5500BB');
+            } else if (event.key === 'Shift') {
+                await writeValue('AA5500BB');
             }
         };
 
         const handleKeyUp = async (event) => {
-            if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+            if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === ' ' || event.key === 'Shift') {
                 await writeValue('AA5500BB');
             }
         };
